@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(25, 139, 162) 100%);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 30px;
+    background-color: crimson;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+header>h3 {
+    letter-spacing: 2px;
+}
+
+.container {
+    min-height: 100vh;
+    margin: auto;
+    width: 70%;
+    padding: 4vmax 8vmax;
+}
+
+.container>h1 {
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+.container>form {
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+.container span img {
+    width: 9%;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+    outline: 0;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #2f236a;
+    margin: 10px;
+    font-size: 1.1rem;
+    border: 0;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: black;
+        color: #fff;
+    }
+}
+
+svg {
+    font-size: 1.2rem;
+}
+
+.task {
+    /* box-shadow: 10px 10px 150px rgb(198, 196, 196); */
+    display: flex;
+    background-color: #5006d2;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 20px 0;
+    align-items: center;
+    font-weight: 700;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: crimson;
+    }
+}
+
+.task>div {
+    width: 100%;
+}
+
+div>span {
+    /* font-size: 2rem; */
+    color: rgb(243, 242, 242);
+    font-weight: 500;
+}
+
+.task button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task button:hover {
+    background-color: rgb(4, 4, 4);
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .container span img {
+        width: 13%;
+        cursor: pointer;
+    }
+
+    input,
+    textarea,
+    button {
+        margin: 2px;
+        margin-top: 13px;
+
+    }
+
+    /* .container input {
+        font-size: 1.2rem;
+    }
+
+    .container textarea {
+        font-size: 1.2rem;
+    } */
+
+    .container button {
+        font-size: 1.2rem;
+    }
+
+    .task {
+        width: 100%;
+    }
+
+    .task div p {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .container>form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .container>form {
+        grid-template-columns: 1fr;
+    }
+}
